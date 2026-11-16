@@ -1,0 +1,309 @@
+{
+  "Version": 1,
+  "DurationSeconds": 3.67,
+  "Modules": [
+    {
+      "Id": 0,
+      "Type": "OutputModule",
+      "X": 1780,
+      "Y": 150,
+      "Parameters": []
+    },
+    {
+      "Id": 1,
+      "Type": "CurveModule",
+      "X": 80,
+      "Y": 20,
+      "Label": "(výška)",
+      "Parameters": [
+        {
+          "Name": "Délka",
+          "Value": 3.67,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Amplitude",
+          "Value": 1.0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Opakovat",
+          "Value": 0,
+          "ModulationAmount": 0
+        }
+      ],
+      "Curves": [
+        {
+          "Name": "Tvar",
+          "Points": [
+            {
+              "X": 0.0,
+              "Y": 1.0
+            },
+            {
+              "X": 0.05995,
+              "Y": 1.0
+            },
+            {
+              "X": 0.11989,
+              "Y": 0.94632
+            },
+            {
+              "X": 0.17984,
+              "Y": 0.89571
+            },
+            {
+              "X": 0.23978,
+              "Y": 0.84509
+            },
+            {
+              "X": 0.29973,
+              "Y": 0.79755
+            },
+            {
+              "X": 0.36512,
+              "Y": 0.75153
+            },
+            {
+              "X": 0.42507,
+              "Y": 0.70706
+            },
+            {
+              "X": 0.48501,
+              "Y": 0.66564
+            },
+            {
+              "X": 0.54496,
+              "Y": 0.62423
+            },
+            {
+              "X": 0.6049,
+              "Y": 0.58742
+            },
+            {
+              "X": 0.6703,
+              "Y": 0.53988
+            },
+            {
+              "X": 0.73025,
+              "Y": 0.50767
+            },
+            {
+              "X": 0.79019,
+              "Y": 0.47699
+            },
+            {
+              "X": 0.85014,
+              "Y": 0.44939
+            },
+            {
+              "X": 0.91008,
+              "Y": 0.42331
+            },
+            {
+              "X": 1.0,
+              "Y": 0.42331
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": 2,
+      "Type": "OscillatorModule",
+      "X": 400,
+      "Y": 150,
+      "Label": "(základ)",
+      "Parameters": [
+        {
+          "Name": "Waveform",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Vyhlazení hran",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Frequency",
+          "Value": 0,
+          "ModulationAmount": 65.7868
+        },
+        {
+          "Name": "Amplitude",
+          "Value": 0.9,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Seed",
+          "Value": 12345,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 9,
+      "Type": "MixerModule",
+      "X": 700,
+      "Y": 150,
+      "Label": "(parciály)",
+      "Parameters": [
+        {
+          "Name": "Mode",
+          "Value": 0,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 4,
+      "Type": "CurveModule",
+      "X": 1000,
+      "Y": 20,
+      "Label": "(hlasitost)",
+      "Parameters": [
+        {
+          "Name": "Délka",
+          "Value": 3.67,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Amplitude",
+          "Value": 1.0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Opakovat",
+          "Value": 0,
+          "ModulationAmount": 0
+        }
+      ],
+      "Curves": [
+        {
+          "Name": "Tvar",
+          "Points": [
+            {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            {
+              "X": 0.03297,
+              "Y": 1.0
+            },
+            {
+              "X": 0.06267,
+              "Y": 1.0
+            },
+            {
+              "X": 0.12534,
+              "Y": 0.79433
+            },
+            {
+              "X": 0.18801,
+              "Y": 0.63096
+            },
+            {
+              "X": 0.25068,
+              "Y": 0.50119
+            },
+            {
+              "X": 0.31335,
+              "Y": 0.39811
+            },
+            {
+              "X": 0.37602,
+              "Y": 0.35481
+            },
+            {
+              "X": 0.43869,
+              "Y": 0.31623
+            },
+            {
+              "X": 0.50136,
+              "Y": 0.25119
+            },
+            {
+              "X": 0.56403,
+              "Y": 0.22387
+            },
+            {
+              "X": 0.62398,
+              "Y": 0.15849
+            },
+            {
+              "X": 0.68665,
+              "Y": 0.12589
+            },
+            {
+              "X": 0.74932,
+              "Y": 0.08913
+            },
+            {
+              "X": 0.81199,
+              "Y": 0.0631
+            },
+            {
+              "X": 0.87466,
+              "Y": 0.03548
+            },
+            {
+              "X": 0.93733,
+              "Y": 0.01585
+            },
+            {
+              "X": 1.0,
+              "Y": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": 5,
+      "Type": "GainModule",
+      "X": 1300,
+      "Y": 150,
+      "Label": "(obálka)",
+      "Parameters": [
+        {
+          "Name": "Gain",
+          "Value": 0,
+          "ModulationAmount": 0.96605
+        }
+      ]
+    }
+  ],
+  "Connections": [
+    {
+      "SourceModuleId": 1,
+      "SourcePort": "Out",
+      "TargetModuleId": 2,
+      "TargetPort": "Frequency"
+    },
+    {
+      "SourceModuleId": 2,
+      "SourcePort": "Out",
+      "TargetModuleId": 9,
+      "TargetPort": "In 1"
+    },
+    {
+      "SourceModuleId": 9,
+      "SourcePort": "Out",
+      "TargetModuleId": 5,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 4,
+      "SourcePort": "Out",
+      "TargetModuleId": 5,
+      "TargetPort": "Gain"
+    },
+    {
+      "SourceModuleId": 5,
+      "SourcePort": "Out",
+      "TargetModuleId": 0,
+      "TargetPort": "In"
+    }
+  ]
+}

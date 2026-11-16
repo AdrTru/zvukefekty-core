@@ -1,0 +1,344 @@
+{
+  "Version": 1,
+  "DurationSeconds": 0.9061042384587383,
+  "Bpm": 154,
+  "Bars": 4,
+  "IsTempoLocked": false,
+  "Modules": [
+    {
+      "Id": 0,
+      "Type": "OutputModule",
+      "InstanceId": "8cdd6b04-8010-43cf-b9dc-1fd3c53ec98b",
+      "X": 1228,
+      "Y": 215,
+      "Parameters": []
+    },
+    {
+      "Id": 1,
+      "Type": "CurveModule",
+      "InstanceId": "2ba9b6ab-4764-4e96-81fc-f4bba89760e4",
+      "X": 131,
+      "Y": 224,
+      "Parameters": [
+        {
+          "Name": "Délka",
+          "Value": 1,
+          "ModulationAmount": 11.9998
+        },
+        {
+          "Name": "Amplitude",
+          "Value": 1,
+          "ModulationAmount": 0.2
+        },
+        {
+          "Name": "Opakovat",
+          "Value": 0,
+          "ModulationAmount": 0
+        }
+      ],
+      "Curves": [
+        {
+          "Name": "Tvar",
+          "Points": [
+            {
+              "X": 0,
+              "Y": 0,
+              "OutDx": 0.087975,
+              "OutDy": 0.5527632273991241
+            },
+            {
+              "X": 0.25,
+              "Y": 1,
+              "OutDx": 0.087975,
+              "InDx": -0.087975
+            },
+            {
+              "X": 0.5,
+              "Y": 0,
+              "OutDx": 0.087975,
+              "OutDy": -0.5527632273991241,
+              "InDx": -0.087975,
+              "InDy": 0.5527632273991241
+            },
+            {
+              "X": 0.75,
+              "Y": -1,
+              "OutDx": 0.087975,
+              "InDx": -0.087975
+            },
+            {
+              "X": 1,
+              "Y": 0,
+              "InDx": -0.087975,
+              "InDy": -0.5527632273991241
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": 2,
+      "Type": "CurveModule",
+      "InstanceId": "18006974-dd68-4f75-93a8-492bc62110a4",
+      "X": 120,
+      "Y": 397,
+      "Parameters": [
+        {
+          "Name": "Délka",
+          "Value": 1,
+          "ModulationAmount": 11.9998
+        },
+        {
+          "Name": "Amplitude",
+          "Value": 1,
+          "ModulationAmount": 0.2
+        },
+        {
+          "Name": "Opakovat",
+          "Value": 0,
+          "ModulationAmount": 0
+        }
+      ],
+      "Curves": [
+        {
+          "Name": "Tvar",
+          "Points": [
+            {
+              "X": 0,
+              "Y": 1
+            },
+            {
+              "X": 0.1,
+              "Y": 1
+            },
+            {
+              "X": 0.10024420024420025,
+              "Y": -1
+            },
+            {
+              "X": 0.9997557997557998,
+              "Y": -1
+            },
+            {
+              "X": 1,
+              "Y": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": 3,
+      "Type": "CurveModule",
+      "InstanceId": "2293e6c2-4f94-4abf-862f-3f4d20e6e1c9",
+      "X": 119,
+      "Y": 602,
+      "Parameters": [
+        {
+          "Name": "Délka",
+          "Value": 1,
+          "ModulationAmount": 11.9998
+        },
+        {
+          "Name": "Amplitude",
+          "Value": 1,
+          "ModulationAmount": 0.2
+        },
+        {
+          "Name": "Opakovat",
+          "Value": 0,
+          "ModulationAmount": 0
+        }
+      ],
+      "Curves": [
+        {
+          "Name": "Tvar",
+          "Points": [
+            {
+              "X": 0,
+              "Y": -0.03640000000000021,
+              "OutDx": 0.6947791164658634
+            },
+            {
+              "X": 1,
+              "Y": 1,
+              "InDx": -0.285140562248996,
+              "InDy": -0.009733333333333594
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": 4,
+      "Type": "WaveMorphModule",
+      "InstanceId": "69d68567-ae4f-46bd-af4f-93e1e7627d58",
+      "X": 470,
+      "Y": 215,
+      "Parameters": [
+        {
+          "Name": "Frequency",
+          "Value": 0,
+          "ModulationAmount": 1
+        },
+        {
+          "Name": "Amplitude",
+          "Value": 0.8,
+          "ModulationAmount": 0.2
+        },
+        {
+          "Name": "Pozice",
+          "Value": 0,
+          "ModulationAmount": 0.2
+        },
+        {
+          "Name": "Délka",
+          "Value": 1,
+          "ModulationAmount": 12
+        },
+        {
+          "Name": "Opakovat",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Morf",
+          "Value": 0,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 5,
+      "Type": "EnvelopeModule",
+      "InstanceId": "f7eed197-994b-47a6-ad83-c3436ef42ab9",
+      "X": 777,
+      "Y": 216,
+      "Parameters": [
+        {
+          "Name": "Attack",
+          "Value": 0.02,
+          "ModulationAmount": 1,
+          "TempoSynced": true,
+          "Division": "1/32"
+        },
+        {
+          "Name": "Decay",
+          "Value": 0.1,
+          "ModulationAmount": 1,
+          "TempoSynced": true,
+          "Division": "1/8."
+        },
+        {
+          "Name": "Sustain",
+          "Value": 0.2,
+          "ModulationAmount": 0.2
+        },
+        {
+          "Name": "Release",
+          "Value": 0.3,
+          "ModulationAmount": 1,
+          "TempoSynced": true,
+          "Division": "1/4"
+        }
+      ]
+    },
+    {
+      "Id": 6,
+      "Type": "SpectrogramModule",
+      "InstanceId": "f39064ef-e55a-4b5e-baa0-a29b9ef53e0a",
+      "X": 1012,
+      "Y": 215,
+      "Parameters": [
+        {
+          "Name": "Osa",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Barvy",
+          "Value": 1,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Strop",
+          "Value": 12000,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Práh",
+          "Value": -85,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 7,
+      "Type": "NoteModule",
+      "InstanceId": "af962331-324d-434c-a553-97a180eb40aa",
+      "X": 222,
+      "Y": 73,
+      "Parameters": [
+        {
+          "Name": "Octave",
+          "Value": 0,
+          "ModulationAmount": 1.2000000000000002
+        },
+        {
+          "Name": "Klávesnice",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Držení",
+          "Value": 0.5,
+          "ModulationAmount": 0
+        }
+      ]
+    }
+  ],
+  "Connections": [
+    {
+      "SourceModuleId": 1,
+      "SourcePort": "Tvar",
+      "TargetModuleId": 4,
+      "TargetPort": "Vlna A"
+    },
+    {
+      "SourceModuleId": 2,
+      "SourcePort": "Tvar",
+      "TargetModuleId": 4,
+      "TargetPort": "Vlna B"
+    },
+    {
+      "SourceModuleId": 3,
+      "SourcePort": "Tvar",
+      "TargetModuleId": 4,
+      "TargetPort": "Přechod"
+    },
+    {
+      "SourceModuleId": 4,
+      "SourcePort": "Out",
+      "TargetModuleId": 5,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 5,
+      "SourcePort": "Out",
+      "TargetModuleId": 6,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 6,
+      "SourcePort": "Out",
+      "TargetModuleId": 0,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 7,
+      "SourcePort": "Hz",
+      "TargetModuleId": 4,
+      "TargetPort": "Frequency"
+    }
+  ]
+}

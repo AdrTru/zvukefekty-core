@@ -1,0 +1,133 @@
+{
+  "Version": 1,
+  "DurationSeconds": 1.8,
+  "Modules": [
+    {
+      "Id": 0,
+      "Type": "NoiseModule",
+      "X": 40,
+      "Y": 200,
+      "Parameters": [
+        { "Name": "Amplitude", "Value": 1.0, "ModulationAmount": 0 },
+        { "Name": "Seed", "Value": 68474, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 1,
+      "Type": "EnvelopeModule",
+      "X": 300,
+      "Y": 200,
+      "Parameters": [
+        { "Name": "Attack", "Value": 0.0005, "ModulationAmount": 0 },
+        { "Name": "Decay", "Value": 0.02, "ModulationAmount": 0 },
+        { "Name": "Sustain", "Value": 0.0, "ModulationAmount": 0 },
+        { "Name": "Release", "Value": 0.01, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 2,
+      "Type": "ResonatorModule",
+      "X": 560,
+      "Y": 20,
+      "Parameters": [
+        { "Name": "Frequency", "Value": 3200, "ModulationAmount": 0 },
+        { "Name": "Decay", "Value": 0.35, "ModulationAmount": 0 },
+        { "Name": "Gain", "Value": 0.045, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 3,
+      "Type": "ResonatorModule",
+      "X": 560,
+      "Y": 180,
+      "Parameters": [
+        { "Name": "Frequency", "Value": 4700, "ModulationAmount": 0 },
+        { "Name": "Decay", "Value": 0.25, "ModulationAmount": 0 },
+        { "Name": "Gain", "Value": 0.04, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 4,
+      "Type": "ResonatorModule",
+      "X": 560,
+      "Y": 340,
+      "Parameters": [
+        { "Name": "Frequency", "Value": 6100, "ModulationAmount": 0 },
+        { "Name": "Decay", "Value": 0.18, "ModulationAmount": 0 },
+        { "Name": "Gain", "Value": 0.035, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 5,
+      "Type": "FilterModule",
+      "X": 300,
+      "Y": 500,
+      "Parameters": [
+        { "Name": "Type", "Value": 0, "ModulationAmount": 0 },
+        { "Name": "Cutoff", "Value": 250, "ModulationAmount": 0 },
+        { "Name": "Resonance", "Value": 1.2, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 6,
+      "Type": "EnvelopeModule",
+      "X": 560,
+      "Y": 500,
+      "Parameters": [
+        { "Name": "Attack", "Value": 0.001, "ModulationAmount": 0 },
+        { "Name": "Decay", "Value": 0.15, "ModulationAmount": 0 },
+        { "Name": "Sustain", "Value": 0.0, "ModulationAmount": 0 },
+        { "Name": "Release", "Value": 0.05, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 7,
+      "Type": "MixerModule",
+      "X": 820,
+      "Y": 260,
+      "Parameters": []
+    },
+    {
+      "Id": 8,
+      "Type": "DelayModule",
+      "X": 1080,
+      "Y": 260,
+      "Parameters": [
+        { "Name": "Time", "Value": 0.045, "ModulationAmount": 0 },
+        { "Name": "Feedback", "Value": 0.2, "ModulationAmount": 0 },
+        { "Name": "Mix", "Value": 0.18, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 9,
+      "Type": "GainModule",
+      "X": 1320,
+      "Y": 260,
+      "Parameters": [
+        { "Name": "Gain", "Value": 0.5, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 10,
+      "Type": "OutputModule",
+      "X": 1560,
+      "Y": 260,
+      "Parameters": []
+    }
+  ],
+  "Connections": [
+    { "SourceModuleId": 0, "SourcePort": "Out", "TargetModuleId": 1, "TargetPort": "In" },
+    { "SourceModuleId": 1, "SourcePort": "Out", "TargetModuleId": 2, "TargetPort": "In" },
+    { "SourceModuleId": 1, "SourcePort": "Out", "TargetModuleId": 3, "TargetPort": "In" },
+    { "SourceModuleId": 1, "SourcePort": "Out", "TargetModuleId": 4, "TargetPort": "In" },
+    { "SourceModuleId": 0, "SourcePort": "Out", "TargetModuleId": 5, "TargetPort": "In" },
+    { "SourceModuleId": 5, "SourcePort": "Out", "TargetModuleId": 6, "TargetPort": "In" },
+    { "SourceModuleId": 2, "SourcePort": "Out", "TargetModuleId": 7, "TargetPort": "In 1" },
+    { "SourceModuleId": 3, "SourcePort": "Out", "TargetModuleId": 7, "TargetPort": "In 2" },
+    { "SourceModuleId": 4, "SourcePort": "Out", "TargetModuleId": 7, "TargetPort": "In 3" },
+    { "SourceModuleId": 6, "SourcePort": "Out", "TargetModuleId": 7, "TargetPort": "In 4" },
+    { "SourceModuleId": 7, "SourcePort": "Out", "TargetModuleId": 8, "TargetPort": "In" },
+    { "SourceModuleId": 8, "SourcePort": "Out", "TargetModuleId": 9, "TargetPort": "In" },
+    { "SourceModuleId": 9, "SourcePort": "Out", "TargetModuleId": 10, "TargetPort": "In" }
+  ]
+}

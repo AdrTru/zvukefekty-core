@@ -1,0 +1,226 @@
+{
+  "Version": 1,
+  "DurationSeconds": 2,
+  "Bpm": 128,
+  "Bars": 4,
+  "IsTempoLocked": false,
+  "Modules": [
+    {
+      "Id": 0,
+      "Type": "OutputModule",
+      "InstanceId": "54151e23-b026-475a-b15a-d004f891782a",
+      "X": 1380,
+      "Y": 150,
+      "Parameters": []
+    },
+    {
+      "Id": 1,
+      "Type": "NoiseModule",
+      "InstanceId": "f1e8f947-d41f-4e13-8e3f-d12a01638fee",
+      "X": 80,
+      "Y": 150,
+      "Parameters": [
+        {
+          "Name": "Amplitude",
+          "Value": 0.9,
+          "ModulationAmount": 0.2
+        },
+        {
+          "Name": "Seed",
+          "Value": 723100,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 2,
+      "Type": "EnvelopeModule",
+      "InstanceId": "b875852c-e11e-45a7-88a7-690396318ea1",
+      "X": 340,
+      "Y": 150,
+      "Parameters": [
+        {
+          "Name": "Attack",
+          "Value": 0.001,
+          "ModulationAmount": 1
+        },
+        {
+          "Name": "Decay",
+          "Value": 0.015,
+          "ModulationAmount": 1
+        },
+        {
+          "Name": "Sustain",
+          "Value": 0,
+          "ModulationAmount": 0.2
+        },
+        {
+          "Name": "Release",
+          "Value": 0.05,
+          "ModulationAmount": 1
+        }
+      ]
+    },
+    {
+      "Id": 3,
+      "Type": "LfoModule",
+      "InstanceId": "369241a2-db40-4716-af4e-87f46a306bbb",
+      "X": 340,
+      "Y": 20,
+      "Parameters": [
+        {
+          "Name": "Waveform",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Frequency",
+          "Value": 5,
+          "ModulationAmount": 1
+        },
+        {
+          "Name": "Amplitude",
+          "Value": 1,
+          "ModulationAmount": 0.2
+        },
+        {
+          "Name": "Seed",
+          "Value": 633941,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 4,
+      "Type": "ResonatorModule",
+      "InstanceId": "90187b5c-44b6-49be-9e71-b46c0ce195c4",
+      "X": 600,
+      "Y": 80,
+      "Parameters": [
+        {
+          "Name": "Frequency",
+          "Value": 900,
+          "ModulationAmount": 15
+        },
+        {
+          "Name": "Decay",
+          "Value": 1.2,
+          "ModulationAmount": 0.5
+        },
+        {
+          "Name": "Gain",
+          "Value": 0.035,
+          "ModulationAmount": 0.01
+        }
+      ]
+    },
+    {
+      "Id": 5,
+      "Type": "ResonatorModule",
+      "InstanceId": "c69ad998-2a95-49e9-a7af-caf0de1ff3c6",
+      "X": 600,
+      "Y": 220,
+      "Parameters": [
+        {
+          "Name": "Frequency",
+          "Value": 1350,
+          "ModulationAmount": 20
+        },
+        {
+          "Name": "Decay",
+          "Value": 1,
+          "ModulationAmount": 0.5
+        },
+        {
+          "Name": "Gain",
+          "Value": 0.03,
+          "ModulationAmount": 0.01
+        }
+      ]
+    },
+    {
+      "Id": 6,
+      "Type": "MixerModule",
+      "InstanceId": "9a7b21f3-1830-4337-96ff-d98afcc1488e",
+      "X": 860,
+      "Y": 150,
+      "Parameters": [
+        {
+          "Name": "Mode",
+          "Value": 1,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 7,
+      "Type": "GainModule",
+      "InstanceId": "b10f1be9-a79f-490d-8e6a-7dbd074c0b02",
+      "X": 1120,
+      "Y": 150,
+      "Parameters": [
+        {
+          "Name": "Gain",
+          "Value": 0.85,
+          "ModulationAmount": 0.2
+        }
+      ]
+    }
+  ],
+  "Connections": [
+    {
+      "SourceModuleId": 1,
+      "SourcePort": "Out",
+      "TargetModuleId": 2,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 2,
+      "SourcePort": "Out",
+      "TargetModuleId": 4,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 2,
+      "SourcePort": "Out",
+      "TargetModuleId": 5,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 3,
+      "SourcePort": "Out",
+      "TargetModuleId": 4,
+      "TargetPort": "Frequency"
+    },
+    {
+      "SourceModuleId": 3,
+      "SourcePort": "Out",
+      "TargetModuleId": 5,
+      "TargetPort": "Frequency"
+    },
+    {
+      "SourceModuleId": 4,
+      "SourcePort": "Out",
+      "TargetModuleId": 6,
+      "TargetPort": "In 1"
+    },
+    {
+      "SourceModuleId": 5,
+      "SourcePort": "Out",
+      "TargetModuleId": 6,
+      "TargetPort": "In 2"
+    },
+    {
+      "SourceModuleId": 6,
+      "SourcePort": "Out",
+      "TargetModuleId": 7,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 7,
+      "SourcePort": "Out",
+      "TargetModuleId": 0,
+      "TargetPort": "In"
+    }
+  ]
+}

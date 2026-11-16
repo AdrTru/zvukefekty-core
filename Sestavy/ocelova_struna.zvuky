@@ -1,0 +1,131 @@
+{
+  "Version": 1,
+  "DurationSeconds": 1.2,
+  "Modules": [
+    {
+      "Id": 0,
+      "Type": "OutputModule",
+      "X": 1660,
+      "Y": 500,
+      "Parameters": []
+    },
+    {
+      "Id": 1,
+      "Type": "NoiseModule",
+      "X": 80,
+      "Y": 340,
+      "Parameters": [
+        { "Name": "Barva", "Value": 0, "ModulationAmount": 1.0 },
+        { "Name": "Amplitude", "Value": 0.7, "ModulationAmount": 0.2 },
+        { "Name": "Seed", "Value": 12345, "ModulationAmount": 0.0 }
+      ]
+    },
+    {
+      "Id": 2,
+      "Type": "EnvelopeModule",
+      "X": 340,
+      "Y": 340,
+      "Label": "(buzení)",
+      "Parameters": [
+        { "Name": "Attack", "Value": 0.001, "ModulationAmount": 1.0 },
+        { "Name": "Decay", "Value": 0.03, "ModulationAmount": 1.0 },
+        { "Name": "Sustain", "Value": 0.0, "ModulationAmount": 0.2 },
+        { "Name": "Držení", "Value": 0.004, "ModulationAmount": 0.0 },
+        { "Name": "Release", "Value": 0.02, "ModulationAmount": 1.0 }
+      ]
+    },
+    {
+      "Id": 3,
+      "Type": "KarplusStrongModule",
+      "X": 620,
+      "Y": 340,
+      "Label": "(základ)",
+      "Parameters": [
+        { "Name": "Frequency", "Value": 110, "ModulationAmount": 1.0 },
+        { "Name": "Decay", "Value": 0.9, "ModulationAmount": 1.0 },
+        { "Name": "Tlumení", "Value": 0.22, "ModulationAmount": 0.2 },
+        { "Name": "Gain", "Value": 0.8, "ModulationAmount": 0.5 }
+      ]
+    },
+    {
+      "Id": 7,
+      "Type": "KarplusStrongModule",
+      "X": 620,
+      "Y": 680,
+      "Label": "(kovový svrchní tón)",
+      "Parameters": [
+        { "Name": "Frequency", "Value": 293, "ModulationAmount": 1.0 },
+        { "Name": "Decay", "Value": 0.4, "ModulationAmount": 1.0 },
+        { "Name": "Tlumení", "Value": 0.4, "ModulationAmount": 0.2 },
+        { "Name": "Gain", "Value": 0.3, "ModulationAmount": 0.5 }
+      ]
+    },
+    {
+      "Id": 4,
+      "Type": "GainModule",
+      "X": 620,
+      "Y": 1020,
+      "Label": "(trsátko)",
+      "Parameters": [
+        { "Name": "Gain", "Value": 0.3, "ModulationAmount": 0.4 }
+      ]
+    },
+    {
+      "Id": 6,
+      "Type": "EnvelopeModule",
+      "X": 880,
+      "Y": 20,
+      "Label": "(sweep filtru)",
+      "Parameters": [
+        { "Name": "Attack", "Value": 0.002, "ModulationAmount": 1.0 },
+        { "Name": "Decay", "Value": 0.22, "ModulationAmount": 1.0 },
+        { "Name": "Sustain", "Value": 0.0, "ModulationAmount": 0.2 },
+        { "Name": "Držení", "Value": 0.01, "ModulationAmount": 0.0 },
+        { "Name": "Release", "Value": 0.25, "ModulationAmount": 1.0 }
+      ]
+    },
+    {
+      "Id": 5,
+      "Type": "MixerModule",
+      "X": 880,
+      "Y": 500,
+      "Parameters": [
+        { "Name": "Mode", "Value": 0, "ModulationAmount": 1.0 }
+      ]
+    },
+    {
+      "Id": 8,
+      "Type": "FilterModule",
+      "X": 1140,
+      "Y": 500,
+      "Parameters": [
+        { "Name": "Type", "Value": 0, "ModulationAmount": 1.0 },
+        { "Name": "Cutoff", "Value": 900, "ModulationAmount": 6500 },
+        { "Name": "Resonance", "Value": 1.0, "ModulationAmount": 1.0 }
+      ]
+    },
+    {
+      "Id": 9,
+      "Type": "GainModule",
+      "X": 1400,
+      "Y": 500,
+      "Label": "(výstup)",
+      "Parameters": [
+        { "Name": "Gain", "Value": 0.6, "ModulationAmount": 0.4 }
+      ]
+    }
+  ],
+  "Connections": [
+    { "SourceModuleId": 1, "SourcePort": "Out", "TargetModuleId": 2, "TargetPort": "In" },
+    { "SourceModuleId": 2, "SourcePort": "Out", "TargetModuleId": 3, "TargetPort": "Trig" },
+    { "SourceModuleId": 2, "SourcePort": "Out", "TargetModuleId": 7, "TargetPort": "Trig" },
+    { "SourceModuleId": 2, "SourcePort": "Out", "TargetModuleId": 4, "TargetPort": "In" },
+    { "SourceModuleId": 3, "SourcePort": "Out", "TargetModuleId": 5, "TargetPort": "In 1" },
+    { "SourceModuleId": 7, "SourcePort": "Out", "TargetModuleId": 5, "TargetPort": "In 2" },
+    { "SourceModuleId": 4, "SourcePort": "Out", "TargetModuleId": 5, "TargetPort": "In 3" },
+    { "SourceModuleId": 5, "SourcePort": "Out", "TargetModuleId": 8, "TargetPort": "In" },
+    { "SourceModuleId": 6, "SourcePort": "Env", "TargetModuleId": 8, "TargetPort": "Cutoff" },
+    { "SourceModuleId": 8, "SourcePort": "Out", "TargetModuleId": 9, "TargetPort": "In" },
+    { "SourceModuleId": 9, "SourcePort": "Out", "TargetModuleId": 0, "TargetPort": "In" }
+  ]
+}

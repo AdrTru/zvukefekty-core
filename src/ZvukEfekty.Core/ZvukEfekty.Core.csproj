@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <!-- Balíček ze stejného důvodu jako u přehrávače: cizí projekt si tohle linkuje.
+       Verze drží krok s ZvukEfekty.Prehravac, protože se vydávají spolu. -->
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <PackageId>ZvukEfekty.Core</PackageId>
+    <Version>0.4.1</Version>
+    <Authors>tmscek</Authors>
+    <Copyright>Copyright (c) 2026 Tomáš Macek</Copyright>
+    <Description>Syntézní engine sestav .zvuky: graf modulů, katalog modulů a čtení souborů .zvuky. Bez NAudia a bez vazby na platformu — zvuk se tudy počítá, ne přehrává.</Description>
+    <!-- Návod pro cizí program jede v balíčku s knihovnou: kdo dostane jen .nupkg, jiný nemá. -->
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <!-- Není to čistá MIT (přidaná povinnost sdílet sestavy), takže ne PackageLicenseExpression:
+         SPDX výraz MIT by o té povinnosti mlčel. Licence jede v balíčku jako soubor. -->
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://www.pekelec.eu/zvuky/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/AdrTru/zvukefekty-core</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE" Pack="true" PackagePath="\" />
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <!-- Úplná reference API, generovaná z přeložené knihovny (viz todo.md 16). Jede v balíčku vedle README. -->
+    <None Include="API.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

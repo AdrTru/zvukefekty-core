@@ -1,0 +1,317 @@
+{
+  "Version": 1,
+  "DurationSeconds": 7.6,
+  "Bpm": 150,
+  "Bars": 4,
+  "IsTempoLocked": false,
+  "Modules": [
+    {
+      "Id": 0,
+      "Type": "OutputModule",
+      "X": 1700,
+      "Y": 170,
+      "Parameters": []
+    },
+    {
+      "Id": 1,
+      "Type": "SequencerModule",
+      "X": 80,
+      "Y": 170,
+      "Parameters": [
+        {
+          "Name": "Délka kroku",
+          "Value": 0.2,
+          "ModulationAmount": 0.4,
+          "TempoSynced": true,
+          "Division": "1/8"
+        },
+        {
+          "Name": "Artikulace",
+          "Value": 0.85,
+          "ModulationAmount": 0.2
+        },
+        {
+          "Name": "Oktáva",
+          "Value": 0,
+          "ModulationAmount": 1.0
+        },
+        {
+          "Name": "Opakovat",
+          "Value": 0,
+          "ModulationAmount": 0
+        }
+      ],
+      "Sequences": [
+        {
+          "Name": "Kroky",
+          "Steps": [
+            {
+              "Note": 64,
+              "Length": 2
+            },
+            {
+              "Note": 64,
+              "Length": 2
+            },
+            {
+              "Note": 65,
+              "Length": 2
+            },
+            {
+              "Note": 67,
+              "Length": 2
+            },
+            {
+              "Note": 67,
+              "Length": 2
+            },
+            {
+              "Note": 65,
+              "Length": 2
+            },
+            {
+              "Note": 64,
+              "Length": 2
+            },
+            {
+              "Note": 62,
+              "Length": 2
+            },
+            {
+              "Note": 60,
+              "Length": 2
+            },
+            {
+              "Note": 60,
+              "Length": 2
+            },
+            {
+              "Note": 62,
+              "Length": 2
+            },
+            {
+              "Note": 64,
+              "Length": 2
+            },
+            {
+              "Note": 64,
+              "Length": 3
+            },
+            {
+              "Note": 62,
+              "Length": 1
+            },
+            {
+              "Note": 62,
+              "Length": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": 2,
+      "Type": "OscillatorModule",
+      "X": 400,
+      "Y": 90,
+      "Parameters": [
+        {
+          "Name": "Waveform",
+          "Value": 3,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Seed",
+          "Value": 12345,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Frequency",
+          "Value": 0.0,
+          "ModulationAmount": 1.0
+        },
+        {
+          "Name": "Amplitude",
+          "Value": 0.85,
+          "ModulationAmount": 0.2
+        }
+      ]
+    },
+    {
+      "Id": 3,
+      "Type": "OscillatorModule",
+      "X": 400,
+      "Y": 300,
+      "Parameters": [
+        {
+          "Name": "Waveform",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Seed",
+          "Value": 12345,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Frequency",
+          "Value": 0.0,
+          "ModulationAmount": 2.0
+        },
+        {
+          "Name": "Amplitude",
+          "Value": 0.3,
+          "ModulationAmount": 0.2
+        }
+      ]
+    },
+    {
+      "Id": 4,
+      "Type": "MixerModule",
+      "X": 700,
+      "Y": 170,
+      "Parameters": [
+        {
+          "Name": "Mode",
+          "Value": 1,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 5,
+      "Type": "EnvelopeModule",
+      "X": 950,
+      "Y": 170,
+      "Parameters": [
+        {
+          "Name": "Attack",
+          "Value": 0.012,
+          "ModulationAmount": 1.0
+        },
+        {
+          "Name": "Decay",
+          "Value": 0.22,
+          "ModulationAmount": 1.0
+        },
+        {
+          "Name": "Sustain",
+          "Value": 0.45,
+          "ModulationAmount": 0.2
+        },
+        {
+          "Name": "Držení",
+          "Value": 0.0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Release",
+          "Value": 0.06,
+          "ModulationAmount": 1.0
+        }
+      ]
+    },
+    {
+      "Id": 6,
+      "Type": "ReverbModule",
+      "X": 1200,
+      "Y": 170,
+      "Parameters": [
+        {
+          "Name": "Dozvuk",
+          "Value": 1.1,
+          "ModulationAmount": 2.0
+        },
+        {
+          "Name": "Velikost",
+          "Value": 0.9,
+          "ModulationAmount": 0.3
+        },
+        {
+          "Name": "Tlumení",
+          "Value": 0.5,
+          "ModulationAmount": 0.2
+        },
+        {
+          "Name": "Předzpoždění",
+          "Value": 18,
+          "ModulationAmount": 24
+        },
+        {
+          "Name": "Mix",
+          "Value": 0.22,
+          "ModulationAmount": 0.2
+        }
+      ]
+    },
+    {
+      "Id": 7,
+      "Type": "GainModule",
+      "X": 1450,
+      "Y": 170,
+      "Parameters": [
+        {
+          "Name": "Gain",
+          "Value": 1.9,
+          "ModulationAmount": 0.4
+        }
+      ]
+    }
+  ],
+  "Connections": [
+    {
+      "SourceModuleId": 1,
+      "SourcePort": "Hz",
+      "TargetModuleId": 2,
+      "TargetPort": "Frequency"
+    },
+    {
+      "SourceModuleId": 1,
+      "SourcePort": "Hz",
+      "TargetModuleId": 3,
+      "TargetPort": "Frequency"
+    },
+    {
+      "SourceModuleId": 1,
+      "SourcePort": "Gate",
+      "TargetModuleId": 5,
+      "TargetPort": "Gate"
+    },
+    {
+      "SourceModuleId": 2,
+      "SourcePort": "Out",
+      "TargetModuleId": 4,
+      "TargetPort": "In 1"
+    },
+    {
+      "SourceModuleId": 3,
+      "SourcePort": "Out",
+      "TargetModuleId": 4,
+      "TargetPort": "In 2"
+    },
+    {
+      "SourceModuleId": 4,
+      "SourcePort": "Out",
+      "TargetModuleId": 5,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 5,
+      "SourcePort": "Out",
+      "TargetModuleId": 6,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 6,
+      "SourcePort": "Out",
+      "TargetModuleId": 7,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 7,
+      "SourcePort": "Out",
+      "TargetModuleId": 0,
+      "TargetPort": "In"
+    }
+  ]
+}

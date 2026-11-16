@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "DurationSeconds": 1.5,
+  "Modules": [
+    {
+      "Id": 0,
+      "Type": "NoiseModule",
+      "X": 40,
+      "Y": 200,
+      "Parameters": [
+        { "Name": "Amplitude", "Value": 0.9, "ModulationAmount": 0 },
+        { "Name": "Seed", "Value": 698190, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 1,
+      "Type": "EnvelopeModule",
+      "X": 300,
+      "Y": 200,
+      "Parameters": [
+        { "Name": "Attack", "Value": 0.0005, "ModulationAmount": 0 },
+        { "Name": "Decay", "Value": 0.015, "ModulationAmount": 0 },
+        { "Name": "Sustain", "Value": 0.0, "ModulationAmount": 0 },
+        { "Name": "Release", "Value": 0.01, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 2,
+      "Type": "ResonatorModule",
+      "X": 560,
+      "Y": 40,
+      "Parameters": [
+        { "Name": "Frequency", "Value": 900, "ModulationAmount": 0 },
+        { "Name": "Decay", "Value": 0.09, "ModulationAmount": 0 },
+        { "Name": "Gain", "Value": 0.022, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 3,
+      "Type": "ResonatorModule",
+      "X": 560,
+      "Y": 220,
+      "Parameters": [
+        { "Name": "Frequency", "Value": 1500, "ModulationAmount": 0 },
+        { "Name": "Decay", "Value": 0.06, "ModulationAmount": 0 },
+        { "Name": "Gain", "Value": 0.018, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 4,
+      "Type": "DistortionModule",
+      "X": 820,
+      "Y": 220,
+      "Parameters": [
+        { "Name": "Type", "Value": 0, "ModulationAmount": 0 },
+        { "Name": "Drive", "Value": 5, "ModulationAmount": 0 },
+        { "Name": "Bits", "Value": 8, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 5,
+      "Type": "FilterModule",
+      "X": 300,
+      "Y": 420,
+      "Parameters": [
+        { "Name": "Type", "Value": 0, "ModulationAmount": 0 },
+        { "Name": "Cutoff", "Value": 180, "ModulationAmount": 0 },
+        { "Name": "Resonance", "Value": 1.1, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 6,
+      "Type": "EnvelopeModule",
+      "X": 560,
+      "Y": 420,
+      "Parameters": [
+        { "Name": "Attack", "Value": 0.001, "ModulationAmount": 0 },
+        { "Name": "Decay", "Value": 0.25, "ModulationAmount": 0 },
+        { "Name": "Sustain", "Value": 0.0, "ModulationAmount": 0 },
+        { "Name": "Release", "Value": 0.12, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 7,
+      "Type": "MixerModule",
+      "X": 1080,
+      "Y": 220,
+      "Parameters": []
+    },
+    {
+      "Id": 8,
+      "Type": "GainModule",
+      "X": 1320,
+      "Y": 220,
+      "Parameters": [
+        { "Name": "Gain", "Value": 0.4, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 9,
+      "Type": "OutputModule",
+      "X": 1560,
+      "Y": 220,
+      "Parameters": []
+    }
+  ],
+  "Connections": [
+    { "SourceModuleId": 0, "SourcePort": "Out", "TargetModuleId": 1, "TargetPort": "In" },
+    { "SourceModuleId": 1, "SourcePort": "Out", "TargetModuleId": 2, "TargetPort": "In" },
+    { "SourceModuleId": 1, "SourcePort": "Out", "TargetModuleId": 3, "TargetPort": "In" },
+    { "SourceModuleId": 3, "SourcePort": "Out", "TargetModuleId": 4, "TargetPort": "In" },
+    { "SourceModuleId": 0, "SourcePort": "Out", "TargetModuleId": 5, "TargetPort": "In" },
+    { "SourceModuleId": 5, "SourcePort": "Out", "TargetModuleId": 6, "TargetPort": "In" },
+    { "SourceModuleId": 2, "SourcePort": "Out", "TargetModuleId": 7, "TargetPort": "In 1" },
+    { "SourceModuleId": 4, "SourcePort": "Out", "TargetModuleId": 7, "TargetPort": "In 2" },
+    { "SourceModuleId": 6, "SourcePort": "Out", "TargetModuleId": 7, "TargetPort": "In 3" },
+    { "SourceModuleId": 7, "SourcePort": "Out", "TargetModuleId": 8, "TargetPort": "In" },
+    { "SourceModuleId": 8, "SourcePort": "Out", "TargetModuleId": 9, "TargetPort": "In" }
+  ]
+}

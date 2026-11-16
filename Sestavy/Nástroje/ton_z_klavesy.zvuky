@@ -1,0 +1,160 @@
+{
+  "Version": 1,
+  "DurationSeconds": 1.5,
+  "Bpm": 128,
+  "Bars": 4,
+  "IsTempoLocked": false,
+  "Modules": [
+    {
+      "Id": 0,
+      "Type": "NoteModule",
+      "InstanceId": "adbd0a91-4b43-40ac-bf17-3f100f2b0c06",
+      "X": 120,
+      "Y": 140,
+      "Parameters": [
+        {
+          "Name": "Octave",
+          "Value": 0,
+          "ModulationAmount": 1.2000000000000002
+        },
+        {
+          "Name": "Klávesnice",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Držení",
+          "Value": 0.8,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 1,
+      "Type": "OscillatorModule",
+      "InstanceId": "75bf3d48-e445-4bc0-99a7-c01c02c84df1",
+      "X": 360,
+      "Y": 140,
+      "Parameters": [
+        {
+          "Name": "Waveform",
+          "Value": 3,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Vyhlazení hran",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Frequency",
+          "Value": 0,
+          "ModulationAmount": 1
+        },
+        {
+          "Name": "Amplitude",
+          "Value": 0.8,
+          "ModulationAmount": 0.2
+        },
+        {
+          "Name": "Seed",
+          "Value": 558432,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 2,
+      "Type": "EnvelopeModule",
+      "InstanceId": "64a94b56-87b1-420a-8bda-6b54a116184a",
+      "X": 600,
+      "Y": 140,
+      "Parameters": [
+        {
+          "Name": "Attack",
+          "Value": 0.01,
+          "ModulationAmount": 2
+        },
+        {
+          "Name": "Decay",
+          "Value": 0.25,
+          "ModulationAmount": 2
+        },
+        {
+          "Name": "Sustain",
+          "Value": 0.7,
+          "ModulationAmount": 0.2
+        },
+        {
+          "Name": "Držení",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Release",
+          "Value": 0.35,
+          "ModulationAmount": 2
+        }
+      ]
+    },
+    {
+      "Id": 3,
+      "Type": "OutputModule",
+      "InstanceId": "9b8baacf-e5d5-4c35-bc0e-9aaa7cb72fd6",
+      "X": 840,
+      "Y": 140,
+      "Parameters": []
+    }
+  ],
+  "Connections": [
+    {
+      "SourceModuleId": 0,
+      "SourcePort": "Hz",
+      "TargetModuleId": 1,
+      "TargetPort": "Frequency"
+    },
+    {
+      "SourceModuleId": 0,
+      "SourcePort": "Gate",
+      "TargetModuleId": 2,
+      "TargetPort": "Gate"
+    },
+    {
+      "SourceModuleId": 1,
+      "SourcePort": "Out",
+      "TargetModuleId": 2,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 2,
+      "SourcePort": "Out",
+      "TargetModuleId": 3,
+      "TargetPort": "In"
+    }
+  ],
+  "Groups": [
+    {
+      "Title": "Tón z klávesy",
+      "Description": "Nejkratší celá cesta od klávesy ke zvuku: Nota dá výšku a stisk, Oscillator z výšky udělá tón, Envelope ho podle stisku otevře a zase pustí, Output ho vyvede ven. Výšku nese hloubka modulace 1 na základu 0 — Frequency na oscilátoru musí jít z cesty.",
+      "X": 92,
+      "Y": 52,
+      "Width": 936,
+      "Height": 348,
+      "Locked": true,
+      "Ports": [
+        {
+          "Name": "Zvuk",
+          "IsInput": false,
+          "ModuleId": 2,
+          "Port": "Out"
+        },
+        {
+          "Name": "Do výstupu",
+          "IsInput": true,
+          "ModuleId": 3,
+          "Port": "In"
+        }
+      ]
+    }
+  ]
+}

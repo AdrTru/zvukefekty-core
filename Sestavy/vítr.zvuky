@@ -1,0 +1,209 @@
+{
+  "Version": 1,
+  "DurationSeconds": 5,
+  "Bpm": 128,
+  "Bars": 4,
+  "IsTempoLocked": false,
+  "Modules": [
+    {
+      "Id": 0,
+      "Type": "OutputModule",
+      "InstanceId": "355d5d82-8d67-4ddd-94e7-241f86b894ea",
+      "X": 1120,
+      "Y": 340,
+      "Parameters": []
+    },
+    {
+      "Id": 1,
+      "Type": "NoiseModule",
+      "InstanceId": "aeed8553-eda0-495c-b904-025a676ccbe1",
+      "X": 80,
+      "Y": 340,
+      "Parameters": [
+        {
+          "Name": "Barva",
+          "Value": 1,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Amplitude",
+          "Value": 1,
+          "ModulationAmount": 0.2
+        },
+        {
+          "Name": "Seed",
+          "Value": 260906,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 2,
+      "Type": "LfoModule",
+      "InstanceId": "22d012fc-bb88-4587-b038-3e10db32300b",
+      "X": 80,
+      "Y": 40,
+      "Parameters": [
+        {
+          "Name": "Waveform",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Frequency",
+          "Value": 0.22,
+          "ModulationAmount": 0.4
+        },
+        {
+          "Name": "Amplitude",
+          "Value": 1,
+          "ModulationAmount": 0.2
+        },
+        {
+          "Name": "Seed",
+          "Value": 111,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 3,
+      "Type": "FilterModule",
+      "InstanceId": "e303f1ea-e17f-4e6f-8028-9439f9e530c2",
+      "X": 340,
+      "Y": 340,
+      "Parameters": [
+        {
+          "Name": "Type",
+          "Value": 4,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Cutoff",
+          "Value": 950,
+          "ModulationAmount": 550
+        },
+        {
+          "Name": "Resonance",
+          "Value": 5,
+          "ModulationAmount": 2
+        }
+      ]
+    },
+    {
+      "Id": 4,
+      "Type": "LfoModule",
+      "InstanceId": "5625d774-bf0b-48c1-81b8-d8e086dd2f2f",
+      "X": 80,
+      "Y": 640,
+      "Parameters": [
+        {
+          "Name": "Waveform",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Frequency",
+          "Value": 0.13,
+          "ModulationAmount": 0.4
+        },
+        {
+          "Name": "Amplitude",
+          "Value": 1,
+          "ModulationAmount": 0.2
+        },
+        {
+          "Name": "Seed",
+          "Value": 222,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 5,
+      "Type": "EnvelopeModule",
+      "InstanceId": "dd6c225a-4833-4569-a671-4c0061b3607d",
+      "X": 600,
+      "Y": 340,
+      "Parameters": [
+        {
+          "Name": "Attack",
+          "Value": 0.9,
+          "ModulationAmount": 1
+        },
+        {
+          "Name": "Decay",
+          "Value": 0.6,
+          "ModulationAmount": 1
+        },
+        {
+          "Name": "Sustain",
+          "Value": 0.85,
+          "ModulationAmount": 0.2
+        },
+        {
+          "Name": "Držení",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Release",
+          "Value": 1.1,
+          "ModulationAmount": 1
+        }
+      ]
+    },
+    {
+      "Id": 6,
+      "Type": "GainModule",
+      "InstanceId": "f66e616d-baeb-4948-a06e-ff0671f34ab8",
+      "X": 860,
+      "Y": 340,
+      "Parameters": [
+        {
+          "Name": "Gain",
+          "Value": 0.4,
+          "ModulationAmount": 0.15
+        }
+      ]
+    }
+  ],
+  "Connections": [
+    {
+      "SourceModuleId": 2,
+      "SourcePort": "Out",
+      "TargetModuleId": 3,
+      "TargetPort": "Cutoff"
+    },
+    {
+      "SourceModuleId": 1,
+      "SourcePort": "Out",
+      "TargetModuleId": 3,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 3,
+      "SourcePort": "Out",
+      "TargetModuleId": 5,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 4,
+      "SourcePort": "Out",
+      "TargetModuleId": 6,
+      "TargetPort": "Gain"
+    },
+    {
+      "SourceModuleId": 5,
+      "SourcePort": "Out",
+      "TargetModuleId": 6,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 6,
+      "SourcePort": "Out",
+      "TargetModuleId": 0,
+      "TargetPort": "In"
+    }
+  ]
+}

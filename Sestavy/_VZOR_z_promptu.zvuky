@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "DurationSeconds": 0.4,
+  "Modules": [
+    {
+      "Id": 0,
+      "Type": "OutputModule",
+      "X": 900,
+      "Y": 150,
+      "Parameters": []
+    },
+    {
+      "Id": 3,
+      "Type": "EnvelopeModule",
+      "X": 80,
+      "Y": 20,
+      "Parameters": [
+        { "Name": "Attack", "Value": 0.005, "ModulationAmount": 0 },
+        { "Name": "Decay", "Value": 0.18, "ModulationAmount": 0 },
+        { "Name": "Sustain", "Value": 0.0, "ModulationAmount": 0 },
+        { "Name": "Release", "Value": 0.05, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 1,
+      "Type": "OscillatorModule",
+      "X": 380,
+      "Y": 150,
+      "Parameters": [
+        { "Name": "Waveform", "Value": 0, "ModulationAmount": 0 },
+        { "Name": "Frequency", "Value": 220, "ModulationAmount": 1400 },
+        { "Name": "Amplitude", "Value": 0.9, "ModulationAmount": 0 },
+        { "Name": "Seed", "Value": 12345, "ModulationAmount": 0 }
+      ]
+    },
+    {
+      "Id": 2,
+      "Type": "EnvelopeModule",
+      "X": 640,
+      "Y": 150,
+      "Parameters": [
+        { "Name": "Attack", "Value": 0.005, "ModulationAmount": 0 },
+        { "Name": "Decay", "Value": 0.12, "ModulationAmount": 0 },
+        { "Name": "Sustain", "Value": 0.0, "ModulationAmount": 0 },
+        { "Name": "Release", "Value": 0.1, "ModulationAmount": 0 }
+      ]
+    }
+  ],
+  "Connections": [
+    { "SourceModuleId": 3, "SourcePort": "Env", "TargetModuleId": 1, "TargetPort": "Frequency" },
+    { "SourceModuleId": 1, "SourcePort": "Out", "TargetModuleId": 2, "TargetPort": "In" },
+    { "SourceModuleId": 2, "SourcePort": "Out", "TargetModuleId": 0, "TargetPort": "In" }
+  ]
+}

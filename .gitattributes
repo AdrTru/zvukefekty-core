@@ -1,0 +1,4 @@
+# V repozitáři LF, na disku podle systému. Sestavy .zvuky jsou text (JSON).
+* text=auto
+*.zvuky text
+*.wav binary

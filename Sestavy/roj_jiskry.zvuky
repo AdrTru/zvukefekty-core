@@ -1,0 +1,144 @@
+{
+  "Version": 1,
+  "DurationSeconds": 4,
+  "Modules": [
+    {
+      "Id": 0,
+      "Type": "PoissonTriggerModule",
+      "X": 40,
+      "Y": 40,
+      "Parameters": [
+        {
+          "Name": "Četnost",
+          "Value": 12,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Seed",
+          "Value": 1234,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 1,
+      "Type": "SampleHoldModule",
+      "X": 40,
+      "Y": 260,
+      "Parameters": [
+        {
+          "Name": "Seed",
+          "Value": 777,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 2,
+      "Type": "SwarmModule",
+      "X": 300,
+      "Y": 40,
+      "Parameters": [
+        {
+          "Name": "Release",
+          "Value": 0.4,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 3,
+      "Type": "OscillatorModule",
+      "X": 560,
+      "Y": 40,
+      "Parameters": [
+        {
+          "Name": "Frequency",
+          "Value": 1400,
+          "ModulationAmount": 600
+        },
+        {
+          "Name": "Amplitude",
+          "Value": 0.12,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 4,
+      "Type": "SwarmEndModule",
+      "X": 820,
+      "Y": 40,
+      "Parameters": []
+    },
+    {
+      "Id": 5,
+      "Type": "OutputModule",
+      "X": 1340,
+      "Y": 40,
+      "Parameters": []
+    },
+    {
+      "Id": 6,
+      "Type": "ReverbModule",
+      "X": 1080,
+      "Y": 40,
+      "Parameters": [
+        {
+          "Name": "Dozvuk",
+          "Value": 2.5,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Mix",
+          "Value": 0.45,
+          "ModulationAmount": 0
+        }
+      ]
+    }
+  ],
+  "Connections": [
+    {
+      "SourceModuleId": 0,
+      "SourcePort": "Trig",
+      "TargetModuleId": 2,
+      "TargetPort": "Trig"
+    },
+    {
+      "SourceModuleId": 0,
+      "SourcePort": "Trig",
+      "TargetModuleId": 1,
+      "TargetPort": "Trig"
+    },
+    {
+      "SourceModuleId": 1,
+      "SourcePort": "Out",
+      "TargetModuleId": 2,
+      "TargetPort": "Vstup 1"
+    },
+    {
+      "SourceModuleId": 2,
+      "SourcePort": "Hodnota 1",
+      "TargetModuleId": 3,
+      "TargetPort": "Frequency"
+    },
+    {
+      "SourceModuleId": 3,
+      "SourcePort": "Out",
+      "TargetModuleId": 4,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 4,
+      "SourcePort": "Out",
+      "TargetModuleId": 6,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 6,
+      "SourcePort": "Out",
+      "TargetModuleId": 5,
+      "TargetPort": "In"
+    }
+  ]
+}

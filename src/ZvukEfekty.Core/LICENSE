@@ -1,0 +1,162 @@
+ZvukEfekty Core License, version 1.0
+(the MIT License with one added condition: sharing of patches)
+
+Copyright (c) 2026 Tomáš Macek
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+1. The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+
+2. Every patch used in a published work shall be shared as described in the
+   section "Patch sharing" below.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+Patch sharing
+-------------
+
+Definitions
+
+  "Patch" means a file in the .zvuky format, or any other description of a
+  graph of the Software's modules, that the Software loads, renders or plays.
+
+  "Work" means anything you make available to the public or to any third
+  party, free of charge or not: for example a game, an application, a video,
+  a recording, a sound pack, a sample library or a stream.
+
+  A Patch is "used in a Work" when the Work contains the Patch, or contains
+  sound that the Software produced from the Patch, whether rendered in advance
+  or while the Work runs.
+
+  "Library" means the public patch library at
+  https://www.pekelec.eu/zvuky/knihovna.html, or its successor announced at
+  that address or in the Software's official repository.
+
+Obligation
+
+  For every Patch used in a Work, you shall upload that Patch to the Library
+  no later than 30 days after the Work is first made available. Upload the
+  Patch in the version the Work uses. Attach the audio samples the Patch reads
+  (Sampler module) if you have the right to share them; if you do not, name
+  their source in the description of the upload.
+
+Licence of uploaded Patches
+
+  By uploading a Patch you license it to everyone under the Creative Commons
+  Attribution 4.0 International licence (CC BY 4.0,
+  https://creativecommons.org/licenses/by/4.0/). Attached samples keep their
+  own licence.
+
+Exceptions
+
+  You do not have to upload:
+  (a) a Patch that is not used in any Work: private use, experiments, tests;
+  (b) a Patch downloaded from the Library and used unchanged;
+  (c) a Patch distributed together with the Software, used unchanged.
+
+Fulfilment
+
+  The obligation is fulfilled by submitting the Patch to the Library. If the
+  Library rejects or later removes a submission, you are not in breach. If the
+  Library cannot accept uploads for more than 30 days, the obligation is
+  fulfilled by publishing the Patch under CC BY 4.0 at any publicly accessible
+  place and naming that place in the documentation or credits of the Work.
+
+Languages
+
+  A Czech version of this licence follows. Both versions have the same
+  meaning; in case of doubt, the Czech version prevails.
+
+
+===============================================================================
+
+Licence ZvukEfekty Core, verze 1.0
+(licence MIT s jednou přidanou podmínkou: sdílení sestav)
+
+Copyright (c) 2026 Tomáš Macek
+
+Tímto se bezplatně uděluje svolení každé osobě, která získá kopii tohoto
+softwaru a přidružené dokumentace („Software“), nakládat se Softwarem bez
+omezení, včetně práva Software užívat, kopírovat, upravovat, spojovat,
+zveřejňovat, šířit, poskytovat podlicence a prodávat kopie Softwaru, a
+dovolit totéž osobám, kterým je Software poskytnut, a to za těchto podmínek:
+
+1. Výše uvedené oznámení o autorském právu a toto svolení budou součástí všech
+   kopií nebo podstatných částí Softwaru.
+
+2. Každá sestava užitá ve zveřejněném díle bude sdílena podle oddílu
+   „Sdílení sestav“ níže.
+
+SOFTWARE SE POSKYTUJE „TAK, JAK JE“, BEZ JAKÉKOLI ZÁRUKY, VÝSLOVNÉ NEBO
+PŘEDPOKLÁDANÉ, VČETNĚ ZÁRUKY PRODEJNOSTI, VHODNOSTI PRO URČITÝ ÚČEL A
+NEPORUŠENÍ PRÁV, NE VŠAK POUZE NA NI. AUTOŘI ANI DRŽITELÉ AUTORSKÝCH PRÁV
+V ŽÁDNÉM PŘÍPADĚ NEODPOVÍDAJÍ ZA JAKÝKOLI NÁROK, ŠKODU NEBO JINOU
+ODPOVĚDNOST, AŤ UŽ ZE SMLOUVY, Z DELIKTU NEBO JINAK, VZNIKLÉ ZE SOFTWARU,
+Z JEHO UŽITÍ NEBO Z JINÉHO NAKLÁDÁNÍ SE SOFTWAREM, NEBO V SOUVISLOSTI S NIMI.
+
+
+Sdílení sestav
+--------------
+
+Pojmy
+
+  „Sestava“ je soubor ve formátu .zvuky nebo jiný popis grafu modulů
+  Softwaru, který Software načte, vykreslí nebo přehraje.
+
+  „Dílo“ je cokoli, co zpřístupníte veřejnosti nebo komukoli třetímu,
+  bezplatně i za úplatu: například hra, aplikace, video, nahrávka, balík
+  zvuků, knihovna vzorků nebo stream.
+
+  Sestava je „užita v Díle“, jestliže Dílo obsahuje Sestavu nebo zvuk, který
+  ze Sestavy vytvořil Software, ať byl vykreslen předem, nebo až za běhu Díla.
+
+  „Knihovna“ je veřejná knihovna sestav na adrese
+  https://www.pekelec.eu/zvuky/knihovna.html nebo její nástupce oznámený na
+  této adrese nebo v oficiálním repozitáři Softwaru.
+
+Povinnost
+
+  Každou Sestavu užitou v Díle nahrajete do Knihovny nejpozději do 30 dnů
+  ode dne, kdy bylo Dílo poprvé zpřístupněno. Nahrajete ji ve verzi, kterou
+  Dílo užívá. Vzorky, které Sestava čte (modul Sampler), přiložíte, máte-li
+  právo je sdílet; nemáte-li, uvedete v popisu nahrané Sestavy jejich zdroj.
+
+Licence nahraných Sestav
+
+  Nahráním Sestavy ji poskytujete každému pod licencí Creative Commons
+  Uveďte původ 4.0 Mezinárodní (CC BY 4.0,
+  https://creativecommons.org/licenses/by/4.0/). Přiložené vzorky si
+  ponechávají vlastní licenci.
+
+Výjimky
+
+  Nahrávat nemusíte:
+  a) Sestavu, která není užita v žádném Díle: soukromé užití, pokusy, zkoušky;
+  b) Sestavu staženou z Knihovny a užitou beze změny;
+  c) Sestavu šířenou spolu se Softwarem a užitou beze změny.
+
+Splnění
+
+  Povinnost je splněna odesláním Sestavy do Knihovny. Jestliže Knihovna
+  nahranou Sestavu odmítne nebo později odstraní, povinnost tím porušena není.
+  Nemůže-li Knihovna přijímat Sestavy déle než 30 dnů, je povinnost splněna
+  zveřejněním Sestavy pod licencí CC BY 4.0 na libovolném veřejně přístupném
+  místě a uvedením tohoto místa v dokumentaci nebo titulcích Díla.
+
+Jazyky
+
+  Anglická a česká verze této licence mají stejný význam; v případě
+  pochybností má přednost česká verze.

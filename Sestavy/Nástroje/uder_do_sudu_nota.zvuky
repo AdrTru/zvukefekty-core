@@ -1,0 +1,586 @@
+{
+  "Version": 1,
+  "DurationSeconds": 0.7,
+  "Modules": [
+    {
+      "Id": 20,
+      "Type": "NoteModule",
+      "X": 60,
+      "Y": 20,
+      "Parameters": [
+        {
+          "Name": "Octave",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Klávesnice",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Držení",
+          "Value": 0.12,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 1,
+      "Type": "NoiseModule",
+      "X": 60,
+      "Y": 340,
+      "Label": "(buzení)",
+      "Parameters": [
+        {
+          "Name": "Barva",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Amplitude",
+          "Value": 0.3,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Seed",
+          "Value": 12345,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 2,
+      "Type": "EnvelopeModule",
+      "X": 340,
+      "Y": 20,
+      "Label": "(buzení)",
+      "Parameters": [
+        {
+          "Name": "Attack",
+          "Value": 0.0005,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Decay",
+          "Value": 0.008,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Sustain",
+          "Value": 0.0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Držení",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Release",
+          "Value": 0.01,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 3,
+      "Type": "EnvelopeModule",
+      "X": 340,
+      "Y": 340,
+      "Label": "(sweep výšky)",
+      "Parameters": [
+        {
+          "Name": "Attack",
+          "Value": 0.001,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Decay",
+          "Value": 0.06,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Sustain",
+          "Value": 0.0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Držení",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Release",
+          "Value": 0.03,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 21,
+      "Type": "GainModule",
+      "X": 340,
+      "Y": 660,
+      "Label": "(základ těla)",
+      "Parameters": [
+        {
+          "Name": "Gain",
+          "Value": 0.25833333333333336,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 22,
+      "Type": "MixerModule",
+      "X": 620,
+      "Y": 20,
+      "Label": "(sweep × výška)",
+      "Parameters": [
+        {
+          "Name": "Mode",
+          "Value": 2,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 10,
+      "Type": "GainModule",
+      "X": 620,
+      "Y": 340,
+      "Label": "(suchý náraz)",
+      "Parameters": [
+        {
+          "Name": "Gain",
+          "Value": 0.5,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 23,
+      "Type": "GainModule",
+      "X": 900,
+      "Y": 20,
+      "Label": "(hloubka sweepu)",
+      "Parameters": [
+        {
+          "Name": "Gain",
+          "Value": 0.5416666666666666,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 6,
+      "Type": "ResonatorModule",
+      "X": 900,
+      "Y": 340,
+      "Label": "1",
+      "Parameters": [
+        {
+          "Name": "Frequency",
+          "Value": 0,
+          "ModulationAmount": 1.0
+        },
+        {
+          "Name": "Decay",
+          "Value": 0.45,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Gain",
+          "Value": 0.0015,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 7,
+      "Type": "ResonatorModule",
+      "X": 900,
+      "Y": 620,
+      "Label": "2",
+      "Parameters": [
+        {
+          "Name": "Frequency",
+          "Value": 0,
+          "ModulationAmount": 1.6083
+        },
+        {
+          "Name": "Decay",
+          "Value": 0.32,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Gain",
+          "Value": 0.0015,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 8,
+      "Type": "ResonatorModule",
+      "X": 900,
+      "Y": 900,
+      "Label": "3",
+      "Parameters": [
+        {
+          "Name": "Frequency",
+          "Value": 0,
+          "ModulationAmount": 2.6292
+        },
+        {
+          "Name": "Decay",
+          "Value": 0.22,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Gain",
+          "Value": 0.0015,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 9,
+      "Type": "ResonatorModule",
+      "X": 900,
+      "Y": 1180,
+      "Label": "4",
+      "Parameters": [
+        {
+          "Name": "Frequency",
+          "Value": 0,
+          "ModulationAmount": 3.8667
+        },
+        {
+          "Name": "Decay",
+          "Value": 0.16,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Gain",
+          "Value": 0.0015,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 24,
+      "Type": "MixerModule",
+      "X": 1180,
+      "Y": 20,
+      "Label": "(výška těla)",
+      "Parameters": [
+        {
+          "Name": "Mode",
+          "Value": 0,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 11,
+      "Type": "MixerModule",
+      "X": 1180,
+      "Y": 340,
+      "Label": "(kovové módy)",
+      "Parameters": [
+        {
+          "Name": "Mode",
+          "Value": 0,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 4,
+      "Type": "OscillatorModule",
+      "X": 1460,
+      "Y": 20,
+      "Label": "(tělo bubnu)",
+      "Parameters": [
+        {
+          "Name": "Waveform",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Vyhlazení hran",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Frequency",
+          "Value": 0,
+          "ModulationAmount": 1.0
+        },
+        {
+          "Name": "Amplitude",
+          "Value": 0.55,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Seed",
+          "Value": 12345,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 5,
+      "Type": "EnvelopeModule",
+      "X": 1740,
+      "Y": 20,
+      "Label": "(rána)",
+      "Parameters": [
+        {
+          "Name": "Attack",
+          "Value": 0.002,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Decay",
+          "Value": 0.16,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Sustain",
+          "Value": 0.0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Držení",
+          "Value": 0,
+          "ModulationAmount": 0
+        },
+        {
+          "Name": "Release",
+          "Value": 0.12,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 12,
+      "Type": "MixerModule",
+      "X": 2020,
+      "Y": 20,
+      "Label": "(celek)",
+      "Parameters": [
+        {
+          "Name": "Mode",
+          "Value": 0,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 13,
+      "Type": "GainModule",
+      "X": 2300,
+      "Y": 20,
+      "Label": "(výstup)",
+      "Parameters": [
+        {
+          "Name": "Gain",
+          "Value": 1.35,
+          "ModulationAmount": 0
+        }
+      ]
+    },
+    {
+      "Id": 0,
+      "Type": "OutputModule",
+      "X": 2580,
+      "Y": 20,
+      "Parameters": []
+    }
+  ],
+  "Connections": [
+    {
+      "SourceModuleId": 1,
+      "SourcePort": "Out",
+      "TargetModuleId": 2,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 20,
+      "SourcePort": "Gate",
+      "TargetModuleId": 2,
+      "TargetPort": "Gate"
+    },
+    {
+      "SourceModuleId": 20,
+      "SourcePort": "Gate",
+      "TargetModuleId": 3,
+      "TargetPort": "Gate"
+    },
+    {
+      "SourceModuleId": 20,
+      "SourcePort": "Hz",
+      "TargetModuleId": 21,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 20,
+      "SourcePort": "Hz",
+      "TargetModuleId": 22,
+      "TargetPort": "In 1"
+    },
+    {
+      "SourceModuleId": 3,
+      "SourcePort": "Env",
+      "TargetModuleId": 22,
+      "TargetPort": "In 2"
+    },
+    {
+      "SourceModuleId": 22,
+      "SourcePort": "Out",
+      "TargetModuleId": 23,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 2,
+      "SourcePort": "Out",
+      "TargetModuleId": 10,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 20,
+      "SourcePort": "Hz",
+      "TargetModuleId": 6,
+      "TargetPort": "Frequency"
+    },
+    {
+      "SourceModuleId": 2,
+      "SourcePort": "Out",
+      "TargetModuleId": 6,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 6,
+      "SourcePort": "Out",
+      "TargetModuleId": 11,
+      "TargetPort": "In 1"
+    },
+    {
+      "SourceModuleId": 20,
+      "SourcePort": "Hz",
+      "TargetModuleId": 7,
+      "TargetPort": "Frequency"
+    },
+    {
+      "SourceModuleId": 2,
+      "SourcePort": "Out",
+      "TargetModuleId": 7,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 7,
+      "SourcePort": "Out",
+      "TargetModuleId": 11,
+      "TargetPort": "In 2"
+    },
+    {
+      "SourceModuleId": 20,
+      "SourcePort": "Hz",
+      "TargetModuleId": 8,
+      "TargetPort": "Frequency"
+    },
+    {
+      "SourceModuleId": 2,
+      "SourcePort": "Out",
+      "TargetModuleId": 8,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 8,
+      "SourcePort": "Out",
+      "TargetModuleId": 11,
+      "TargetPort": "In 3"
+    },
+    {
+      "SourceModuleId": 20,
+      "SourcePort": "Hz",
+      "TargetModuleId": 9,
+      "TargetPort": "Frequency"
+    },
+    {
+      "SourceModuleId": 2,
+      "SourcePort": "Out",
+      "TargetModuleId": 9,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 9,
+      "SourcePort": "Out",
+      "TargetModuleId": 11,
+      "TargetPort": "In 4"
+    },
+    {
+      "SourceModuleId": 21,
+      "SourcePort": "Out",
+      "TargetModuleId": 24,
+      "TargetPort": "In 1"
+    },
+    {
+      "SourceModuleId": 23,
+      "SourcePort": "Out",
+      "TargetModuleId": 24,
+      "TargetPort": "In 2"
+    },
+    {
+      "SourceModuleId": 24,
+      "SourcePort": "Out",
+      "TargetModuleId": 4,
+      "TargetPort": "Frequency"
+    },
+    {
+      "SourceModuleId": 4,
+      "SourcePort": "Out",
+      "TargetModuleId": 5,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 20,
+      "SourcePort": "Gate",
+      "TargetModuleId": 5,
+      "TargetPort": "Gate"
+    },
+    {
+      "SourceModuleId": 5,
+      "SourcePort": "Out",
+      "TargetModuleId": 12,
+      "TargetPort": "In 1"
+    },
+    {
+      "SourceModuleId": 11,
+      "SourcePort": "Out",
+      "TargetModuleId": 12,
+      "TargetPort": "In 2"
+    },
+    {
+      "SourceModuleId": 10,
+      "SourcePort": "Out",
+      "TargetModuleId": 12,
+      "TargetPort": "In 3"
+    },
+    {
+      "SourceModuleId": 12,
+      "SourcePort": "Out",
+      "TargetModuleId": 13,
+      "TargetPort": "In"
+    },
+    {
+      "SourceModuleId": 13,
+      "SourcePort": "Out",
+      "TargetModuleId": 0,
+      "TargetPort": "In"
+    }
+  ]
+}

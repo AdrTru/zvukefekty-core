@@ -1,0 +1,72 @@
+using ZvukEfekty.Core.Graph;
+
+namespace ZvukEfekty.Core.Modules;
+
+/// <summary>
+/// Low Frequency Oscillator: the same waveform generator as <see cref="OscillatorModule"/>,
+/// but tuned to sub-audio rates. Not meant to be listened to directly — patch its "Out"
+/// into another module's parameter input (e.g. Gain, for tremolo) to modulate that value over time.
+/// </summary>
+public sealed class LfoModule : ModuleBase
+{
+    private readonly Port _output;
+    private readonly ModuleParameter _waveform;
+    private readonly ModuleParameter _frequency;
+    private readonly ModuleParameter _amplitude;
+    private readonly SeededRandomSource _randomSource;
+    private readonly CurveInput _customWave;
+    private double _phase;
+    private double _held;
+
+    public LfoModule() : base("LFO")
+    {
+        _output = AddOutput("Out");
+
+        _waveform = AddParameter("Waveform", 0, 0, Waveform.Names.Length - 1, options: Waveform.Names);
+        _frequency = AddParameter("Frequency", 2, 0.05, 20, "Hz", tempoSync: TempoSyncKind.Rate);
+        _amplitude = AddParameter("Amplitude", 1.0, 0, 1);
+        // Only the "Random" (sample & hold) shape actually draws from this, but the knob is added
+        // unconditionally so switching to that shape does not change the module's parameter list.
+        _randomSource = AddSeed();
+        _held = _randomSource.GetGenerator(out _).NextDouble() * 2 - 1;
+
+        // Declared as a Cycle, not a bare bipolar curve: this one is read once per period, so its
+        // ends have to meet or the wave steps every cycle and buzzes at the fundamental. The
+        // default is a sine, so switching Waveform to Custom changes nothing until the shape is
+        // actually drawn.
+        // Ends tied: a waveform is read round and round, and a step where the last value meets
+        // the first is heard as buzz on the fundamental. The built-in sine is what plays while
+        // nothing is patched in, so switching to Custom before wiring anything changes nothing.
+        _customWave = AddCurveInput("Vlastní vlna", Curve.Sine(), CurveOutput.Cycle);
+    }
+
+    public override string Description =>
+        "Nízkofrekvenční oscilátor pro modulaci jiných parametrů v čase (tremolo, vibrato apod.) — " +
+        "není určen k přímému poslechu. Zapojte výstup do vstupu modulace jiného modulu.";
+
+    public override void ResetState()
+    {
+        _phase = 0;
+        _randomSource.Reset();
+        _held = _randomSource.GetGenerator(out _).NextDouble() * 2 - 1;
+    }
+
+    public override IReadOnlyDictionary<Port, float[]> Process(RenderContext ctx, IReadOnlyDictionary<Port, float[]> inputBuffers)
+    {
+        var frequency = GetModulatedValues(_frequency, ctx, inputBuffers);
+        var amplitude = GetModulatedValues(_amplitude, ctx, inputBuffers);
+        // A seed changed in the inspector invalidates the held sample-and-hold value too, since it
+        // was drawn from the previous sequence.
+        var random = _randomSource.GetGenerator(out var wasReseeded);
+        if (wasReseeded)
+            _held = random.NextDouble() * 2 - 1;
+
+        // Never antialiased, and no knob offered for it: an LFO's output is a control signal, not
+        // something anyone listens to, and its 0,05-20 Hz range puts every harmonic that could fold
+        // far below where it would matter. A knob here would be a knob that does nothing audible.
+        var output = Waveform.GenerateBuffer((int)_waveform.Value, amplitude, frequency, ctx.SampleRate, random,
+            _customWave.Curve, antialias: false, ref _phase, ref _held, ctx.Scratch);
+
+        return new Dictionary<Port, float[]> { [_output] = output };
+    }
+}

@@ -1,0 +1,166 @@
+{
+  "Version": 1,
+  "DurationSeconds": 0.85,
+  "Modules": [
+    {
+      "Id": 0,
+      "Type": "OutputModule",
+      "X": 1880,
+      "Y": 380,
+      "Parameters": []
+    },
+    {
+      "Id": 1,
+      "Type": "NoiseModule",
+      "X": 60,
+      "Y": 380,
+      "Parameters": [
+        { "Name": "Barva", "Value": 0, "ModulationAmount": 1.0 },
+        { "Name": "Amplitude", "Value": 0.6, "ModulationAmount": 0.2 },
+        { "Name": "Seed", "Value": 90901, "ModulationAmount": 0.0 }
+      ]
+    },
+    {
+      "Id": 2,
+      "Type": "FilterModule",
+      "X": 320,
+      "Y": 380,
+      "Parameters": [
+        { "Name": "Type", "Value": 1, "ModulationAmount": 1.0 },
+        { "Name": "Cutoff", "Value": 1600, "ModulationAmount": 1200 },
+        { "Name": "Resonance", "Value": 1.0, "ModulationAmount": 0.5 }
+      ]
+    },
+    {
+      "Id": 3,
+      "Type": "EnvelopeModule",
+      "X": 580,
+      "Y": 380,
+      "Label": "(prasknutí)",
+      "Parameters": [
+        { "Name": "Attack", "Value": 0.001, "ModulationAmount": 1.0 },
+        { "Name": "Decay", "Value": 0.04, "ModulationAmount": 1.0 },
+        { "Name": "Sustain", "Value": 0.0, "ModulationAmount": 0.2 },
+        { "Name": "Držení", "Value": 0.002, "ModulationAmount": 0.0 },
+        { "Name": "Release", "Value": 0.03, "ModulationAmount": 1.0 }
+      ]
+    },
+    {
+      "Id": 4,
+      "Type": "DelayLineModule",
+      "X": 840,
+      "Y": 380,
+      "Parameters": [
+        { "Name": "Čas", "Value": 25, "ModulationAmount": 5.0 },
+        { "Name": "Zpětná vazba", "Value": 0.0, "ModulationAmount": 0.2 }
+      ]
+    },
+    {
+      "Id": 5,
+      "Type": "ResonatorModule",
+      "X": 1100,
+      "Y": 380,
+      "Label": "(deska 1)",
+      "Parameters": [
+        { "Name": "Frequency", "Value": 3100, "ModulationAmount": 800 },
+        { "Name": "Decay", "Value": 0.26, "ModulationAmount": 0.2 },
+        { "Name": "Gain", "Value": 0.0011, "ModulationAmount": 0.1 }
+      ]
+    },
+    {
+      "Id": 6,
+      "Type": "ResonatorModule",
+      "X": 1100,
+      "Y": 720,
+      "Label": "(deska 2)",
+      "Parameters": [
+        { "Name": "Frequency", "Value": 4700, "ModulationAmount": 800 },
+        { "Name": "Decay", "Value": 0.18, "ModulationAmount": 0.2 },
+        { "Name": "Gain", "Value": 0.0008, "ModulationAmount": 0.1 }
+      ]
+    },
+    {
+      "Id": 7,
+      "Type": "PoissonTriggerModule",
+      "X": 60,
+      "Y": 1060,
+      "Parameters": [
+        { "Name": "Četnost", "Value": 45, "ModulationAmount": 20 },
+        { "Name": "Nepravidelnost", "Value": 1.0, "ModulationAmount": 0.2 },
+        { "Name": "Délka gate", "Value": 0.005, "ModulationAmount": 0.01 },
+        { "Name": "Seed", "Value": 4242, "ModulationAmount": 0.0 }
+      ]
+    },
+    {
+      "Id": 8,
+      "Type": "ResonatorModule",
+      "X": 320,
+      "Y": 1060,
+      "Label": "(střepy)",
+      "Parameters": [
+        { "Name": "Frequency", "Value": 6400, "ModulationAmount": 1000 },
+        { "Name": "Decay", "Value": 0.05, "ModulationAmount": 0.05 },
+        { "Name": "Gain", "Value": 0.035, "ModulationAmount": 0.1 }
+      ]
+    },
+    {
+      "Id": 9,
+      "Type": "EnvelopeModule",
+      "X": 580,
+      "Y": 1060,
+      "Label": "(brána střepů)",
+      "Parameters": [
+        { "Name": "Attack", "Value": 0.03, "ModulationAmount": 1.0 },
+        { "Name": "Decay", "Value": 0.45, "ModulationAmount": 1.0 },
+        { "Name": "Sustain", "Value": 0.0, "ModulationAmount": 0.2 },
+        { "Name": "Držení", "Value": 0.002, "ModulationAmount": 0.0 },
+        { "Name": "Release", "Value": 0.25, "ModulationAmount": 1.0 }
+      ]
+    },
+    {
+      "Id": 10,
+      "Type": "GainModule",
+      "X": 840,
+      "Y": 1060,
+      "Label": "(střepy)",
+      "Parameters": [
+        { "Name": "Gain", "Value": 0.0, "ModulationAmount": 1.0 }
+      ]
+    },
+    {
+      "Id": 11,
+      "Type": "MixerModule",
+      "X": 1360,
+      "Y": 380,
+      "Parameters": [
+        { "Name": "Mode", "Value": 0, "ModulationAmount": 1.0 }
+      ]
+    },
+    {
+      "Id": 12,
+      "Type": "GainModule",
+      "X": 1620,
+      "Y": 380,
+      "Label": "(výstup)",
+      "Parameters": [
+        { "Name": "Gain", "Value": 0.8, "ModulationAmount": 0.4 }
+      ]
+    }
+  ],
+  "Connections": [
+    { "SourceModuleId": 1, "SourcePort": "Out", "TargetModuleId": 2, "TargetPort": "In" },
+    { "SourceModuleId": 2, "SourcePort": "Out", "TargetModuleId": 3, "TargetPort": "In" },
+    { "SourceModuleId": 3, "SourcePort": "Out", "TargetModuleId": 11, "TargetPort": "In 1" },
+    { "SourceModuleId": 3, "SourcePort": "Out", "TargetModuleId": 4, "TargetPort": "In" },
+    { "SourceModuleId": 4, "SourcePort": "Out", "TargetModuleId": 5, "TargetPort": "In" },
+    { "SourceModuleId": 4, "SourcePort": "Out", "TargetModuleId": 6, "TargetPort": "In" },
+    { "SourceModuleId": 5, "SourcePort": "Out", "TargetModuleId": 11, "TargetPort": "In 2" },
+    { "SourceModuleId": 6, "SourcePort": "Out", "TargetModuleId": 11, "TargetPort": "In 3" },
+    { "SourceModuleId": 7, "SourcePort": "Trig", "TargetModuleId": 8, "TargetPort": "In" },
+    { "SourceModuleId": 8, "SourcePort": "Out", "TargetModuleId": 10, "TargetPort": "In" },
+    { "SourceModuleId": 9, "SourcePort": "Env", "TargetModuleId": 10, "TargetPort": "Gain" },
+    { "SourceModuleId": 10, "SourcePort": "Out", "TargetModuleId": 11, "TargetPort": "In 4" },
+    { "SourceModuleId": 11, "SourcePort": "Out", "TargetModuleId": 12, "TargetPort": "In" },
+    { "SourceModuleId": 12, "SourcePort": "Out", "TargetModuleId": 0, "TargetPort": "In" }
+  ]
+}
